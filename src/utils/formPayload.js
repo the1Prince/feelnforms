@@ -1,0 +1,26 @@
+export function buildSubmitPayload(form) {
+  return {
+    fullName: form.fullName?.trim() ?? '',
+    gender: form.gender ?? '',
+    ageRange: form.ageRange ?? '',
+    phone: form.phone?.trim() ?? '',
+    email: form.email?.trim() ?? '',
+    cityRegion: form.cityRegion ?? '',
+    participantType: form.participantType ?? '',
+    orgName: form.orgName?.trim() ?? '',
+    tourismSubSector: form.tourismSubSector ?? [],
+    tourismSubSectorOther: form.tourismSubSectorOther?.trim() ?? '',
+    yearsExperience: form.yearsExperience ?? '',
+    digitalSkillsLevel: form.digitalSkillsLevel ?? '',
+    toolsUsed: form.toolsUsed ?? [],
+    biggestChallenges: form.biggestChallenges?.trim() ?? '',
+    hopeToGain: form.hopeToGain?.trim() ?? '',
+    trainingInterests: form.trainingInterests ?? [],
+    preferredFormat: form.preferredFormat ?? '',
+    availability: form.availability ?? [],
+    deviceAccess: form.deviceAccess ?? '',
+    consent: form.consent === true,
+    howDidYouHear: form.howDidYouHear ?? '',
+    postTrainingSurvey: form.postTrainingSurvey ?? '',
+  };
+}
